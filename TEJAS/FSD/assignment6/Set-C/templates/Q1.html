@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+</head>
+<body>
+
+    <h2>Employee Details</h2>
+
+    {% for emp in employees %}
+        Name: {{ emp[0] }}<br>
+        SALLARY: {{ emp[1] }}<br>
+        Department: {{ emp[2] }}<br><br>
+    {% endfor %}
+
+</body>
+</html>

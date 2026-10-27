@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+
+    {% if not submitted %}
+    <form method="POST">
+        Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        Rating:
+        <select name="rating" required>
+            <option value="">Select Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br><br>
+
+        Comments:
+        <textarea name="comments" required></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+    {% else %}
+    <h2>Submitted Feedback</h2>
+    <p>Name: {{ name }}</p>
+    <p>Rating: {{ rating }}/5</p>
+    <p>Comments: {{ comments }}</p>
+    {% endif %}
+</body>
+</html>

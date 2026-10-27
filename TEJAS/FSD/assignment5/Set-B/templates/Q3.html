@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <h2>Salary Calculator</h2>
+
+    <form method="POST">
+        Basic Salary:
+        <input type="number" name="basic" min="0" step="any" required>
+        <br><br>
+
+        <input type="submit" value="Calculate Salary">
+    </form>
+
+    <h3>Total Salary: {{ total }}</h3>
+</body>
+</html>

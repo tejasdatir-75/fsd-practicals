@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students Marks</title>
+</head>
+<body>
+
+    <h2>Students Scored More Than 60 Marks</h2>
+
+    {% for student in students %}
+        {% if student[1] > 60 %}
+            {{ student[0] }} - {{ student[1] }}<br>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>

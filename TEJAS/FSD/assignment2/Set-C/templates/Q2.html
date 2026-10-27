@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Search</title>
+</head>
+<body>
+    <h2>Search Student</h2>
+
+    <form method="POST">
+        Enter Student Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        <input type="submit" value="Search">
+    </form>
+
+    {% if result %}
+        <h3>Search Result:</h3>
+        {{ result }}
+    {% endif %}
+</body>
+</html>

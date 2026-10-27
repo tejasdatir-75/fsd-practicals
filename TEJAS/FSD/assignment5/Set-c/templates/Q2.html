@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Order Form</title>
+</head>
+<body>
+    <h2>Product Order Form</h2>
+
+    {% if not submitted %}
+    <form method="POST">
+        Product Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        Quantity:
+        <input type="number" name="quantity" min="1" required>
+        <br><br>
+
+        Price:
+        <input type="number" name="price" min="0" step="any" required>
+        <br><br>
+
+        <input type="submit" value="Submit Order">
+    </form>
+    {% else %}
+    <h2>Order Details</h2>
+    Product Name: {{ name }}<br>
+    Quantity: {{ quantity }}<br>
+    Price: {{ price }}<br>
+    Total Amount: {{ total }}
+    {% endif %}
+</body>
+</html>

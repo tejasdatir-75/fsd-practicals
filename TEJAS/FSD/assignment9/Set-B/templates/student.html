@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+    <h2>Student Management System</h2>
+
+    <h3>Add Student</h3>
+
+    <form method="POST" action="/">
+        Student Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        Course:
+        <input type="text" name="course" required>
+        <br><br>
+
+        <input type="submit" value="Add Student">
+    </form>
+
+    <h3>Update Student Course</h3>
+
+    <form method="POST" action="/update">
+        Student ID:
+        <input type="number" name="student_id" min="1" required>
+        <br><br>
+
+        New Course:
+        <input type="text" name="new_course" required>
+        <br><br>
+
+        <input type="submit" value="Update Course">
+    </form>
+
+    <h3>Student Records</h3>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        {% for s in students %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
